@@ -17,70 +17,55 @@ html {
 }
 
 .grid-wrapper {
-  border: 7px solid #BCD1F0;
+  border: 7px solid #1d4986;
   padding: 0px 30px 30px 30px;
   border-radius: 20px;
   background-color: #cdddf4;
 }
 
-/* button {
-  
-  font-size: 2.5rem;
-  border-radius: 50px;
-  padding: 10px;
-  border: solid 1px;
-  
-  background-color: #cdddf4;
-} */
 .pushable {
   background: #0f2443;
-  border-radius: 12px;
+  border-radius: 35px;
   border: none;
   cursor: pointer;
   outline-offset: 4px;
 }
 .front {
+  font-family: monospace;
   display: block;
   padding: 12px 20px;
-  border-radius: 12px;
+  border-radius: 35px;
   font-size: 2rem;
   background: #1d4986;
   color: #e4eff1;
   transform: translateY(-10px);
 }
-
-.pushable:active .front, .pushable:active .front-equal {
-  transform: translateY(-1px);
-}
-
-textarea {
-  background-color:#0C1E31;
-  border: none;
-  ;
-  resize: none;
-  border-radius: 18px 18px 0px 0px;
-  margin: 0px -30px;
-
-  grid-column: auto / span 4;
-  grid-row: auto / span 8;
-}
-
-.front-equal {
-  display: block;
+.equal-face {
   padding: 50px 20px;
-  border-radius: 12px;
-  font-size: 2rem;
-  background: #1d4986;
-  color: #e4eff1;
-  transform: translateY(-10px);
 }
 
-.equal {
+.equal-back {
   display: inline-block;
-
   grid-row: span 2;
 }
 
 .zero {
   grid-column: span 2;
+}
+
+.pushable:active .front {
+  transform: translateY(-5px);
+}
+
+textarea,
+textarea:focus {
+  background-color: #0c1e31;
+  border: none;
+  resize: none;
+  border-radius: 18px 18px 0px 0px;
+  margin: 30px 5px 10px;
+  outline: none;
+  cursor: default;
+  grid-column: auto / span 4;
+  grid-row: auto / span 8;
 }

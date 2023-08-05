@@ -9,29 +9,27 @@ html {
   align-content: center;
 }
 
+.grid-wrapper {
+  padding: 30px;
+  border-radius: 45px;
+  background-color: #0c1e31;
+}
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 100px));
   grid-template-rows: repeat(auto-fit, 200px);
-  gap: 20px;
-}
-
-.grid-wrapper {
-  border: 7px solid #1d4986;
-  padding: 0px 30px 30px 30px;
-  border-radius: 20px;
-  background-color: #cdddf4;
+  gap: 16px;
 }
 
 .pushable {
-  background: #0f2443;
+  background: #143252;
   border-radius: 35px;
   border: none;
   cursor: pointer;
   outline-offset: 4px;
 }
 .front {
-  font-family: monospace;
+  font-family: "Futura", sans-serif;
   display: block;
   padding: 12px 20px;
   border-radius: 35px;
@@ -57,15 +55,32 @@ html {
   transform: translateY(-5px);
 }
 
-textarea,
-textarea:focus {
-  background-color: #0c1e31;
+.total {
+  font-family: "Segment7Standard", sans-serif;
+  font-size: 5em;
+  position: absolute;
+  text-align: right;
+  padding-top: 200px;
+  padding-right: 20px;
+  word-wrap: break-word;
+}
+
+.screen {
+  background-image: url(display.png);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   border: none;
   resize: none;
-  border-radius: 18px 18px 0px 0px;
-  margin: 30px 5px 10px;
+  border-radius: 30px;
   outline: none;
+  margin-bottom: 15px;
   cursor: default;
   grid-column: auto / span 4;
   grid-row: auto / span 8;
+}
+
+input[type="text"],
+input[type="text"]::placeholder {
+  color: rgb(0, 0, 0);
 }

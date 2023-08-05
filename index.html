@@ -5,13 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Calculator</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/segment7"
+      type="text/css"
+    />
   </head>
   <body>
     <div class="grid-wrapper">
       <div class="grid-container">
-        <textarea readonly name="" id="results"></textarea>
-        <button class="pushable">
-          <span class="front">C</span>
+        <input
+          style="position: relative "
+          type="text"
+          readonly
+          id="results"
+          class="screen total"
+          placeholder="0"
+          value=""
+         
+          
+        >
+        </input>
+        <button  class="pushable">
+          <span  class ="front">C</span>
         </button>
         <button class="pushable">
           <span class="front">+/-</span>
@@ -67,7 +84,7 @@
         <button class="pushable">
           <span class="front">.</span>
         </button>
-        <button class="pushable equal-back ">
+        <button class="pushable equal-back">
           <span class="front equal-face">=</span>
         </button>
         <button class="pushable">

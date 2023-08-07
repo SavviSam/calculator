@@ -55,16 +55,6 @@ html {
   transform: translateY(-5px);
 }
 
-.total {
-  font-family: "Segment7Standard", sans-serif;
-  font-size: 5em;
-  position: absolute;
-  text-align: right;
-  padding-top: 200px;
-  padding-right: 20px;
-  word-wrap: break-word;
-}
-
 .screen {
   background-image: url(display.png);
   background-position: center;
@@ -78,6 +68,13 @@ html {
   cursor: default;
   grid-column: auto / span 4;
   grid-row: auto / span 8;
+  font-family: "Segment7Standard", sans-serif;
+  font-size: 5em;
+  position: absolute;
+  text-align: right;
+  padding-top: 200px;
+  padding-right: 20px;
+  word-wrap: break-word;
 }
 
 input[type="text"],

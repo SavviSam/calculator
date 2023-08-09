@@ -3,43 +3,44 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
   display: grid;
   justify-content: center;
   align-content: center;
 }
 
-.grid-wrapper {
+.container {
   padding: 30px;
   border-radius: 45px;
   background-color: #0c1e31;
 }
-.grid-container {
+.wrapper {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 100px));
-  grid-template-rows: repeat(auto-fit, 200px);
+  grid-template-columns: repeat(4, minmax(0, 80px));
+
   gap: 16px;
 }
 
 .pushable {
   background: #143252;
-  border-radius: 35px;
+  border-radius: 40px;
   border: none;
   cursor: pointer;
-  outline-offset: 4px;
+  outline-offset: 5px;
 }
 .front {
   font-family: "Futura", sans-serif;
   display: block;
-  padding: 12px 20px;
+  padding: 10px 15px;
   border-radius: 35px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   background: #1d4986;
   color: #e4eff1;
-  transform: translateY(-10px);
+  transform: translateY(-6px);
 }
 .equal-face {
-  padding: 50px 20px;
+  padding: 50px 15px;
 }
 
 .equal-back {
@@ -52,32 +53,60 @@ html {
 }
 
 .pushable:active .front {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
-.screen {
+#result {
   background-image: url(display.png);
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  border: none;
-  resize: none;
   border-radius: 30px;
-  outline: none;
+  padding-top: 140px;
   margin-bottom: 15px;
   cursor: default;
   grid-column: auto / span 4;
   grid-row: auto / span 8;
-  font-family: "Segment7Standard", sans-serif;
-  font-size: 5em;
-  position: absolute;
-  text-align: right;
-  padding-top: 200px;
-  padding-right: 20px;
-  word-wrap: break-word;
 }
 
-input[type="text"],
-input[type="text"]::placeholder {
+#output {
+  font-family: "Segment7Standard", sans-serif;
+  font-size: 5em;
+  text-align: right;
+  margin: 10px 10px;
+  height: 70px;
+}
+
+#output-value {
+  margin: 0 auto;
+  padding: 0 auto;
+  word-wrap: reverse;
+}
+
+#output-value:empty:before {
+  content: attr(placeholder);
+}
+
+p[type="text"],
+p[type="text"]::placeholder,
+p[type="text"]::selection {
   color: rgb(0, 0, 0);
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+#author {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  font-family: "Futura", sans-serif;
+  font-size: 1rem;
+  position: absolute;
+  /* width: 100%; */
+  text-align: center;
+  bottom: 0;
+  padding-bottom: 20px;
 }

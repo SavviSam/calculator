@@ -13,89 +13,86 @@
     />
   </head>
   <body>
-    <div class="grid-wrapper">
-      <div class="grid-container">
-        <input
-          style="position: relative "
-          type="text"
-          readonly
-          id="results"
-          class="screen"
-          placeholder="0"
-          value=""
-         
-          
-        >
-        </input>
-        <button  class="pushable">
-          <span  class ="front">C</span>
+    <div class="container">
+      <div class="wrapper">
+        <div id="result">
+          <div id="output">
+            <p type="text" placeholder="0" readonly id="output-value"></p>
+          </div>
+        </div>
+
+        <button class="pushable" value="clear">
+          <span class="front">C</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value="+/-">
           <span class="front">+/-</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value="%">
           <span class="front">%</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value="/">
           <span class="front">÷</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value="1">
           <span class="front">1</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value="2">
           <span class="front">2</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value="3">
           <span class="front">3</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value="*">
           <span class="front">*</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value="4">
           <span class="front">4</span>
         </button>
 
-        <button class="pushable">
+        <button class="pushable" value="5">
           <span class="front">5</span>
         </button>
 
-        <button class="pushable">
+        <button class="pushable" value="6">
           <span class="front">6</span>
         </button>
 
-        <button class="pushable">
+        <button class="pushable" value="-">
           <span class="front">-</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value="7">
           <span class="front">7</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value="8">
           <span class="front">8</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value="9">
           <span class="front">9</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value="+">
           <span class="front">+</span>
         </button>
-        <button class="pushable zero">
+        <button class="pushable zero" value="0">
           <span class="front">0</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value=".">
           <span class="front">.</span>
         </button>
-        <button class="pushable equal-back">
+        <button class="pushable equal-back" value="=">
           <span class="front equal-face">=</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value="square-root">
           <span class="front">√</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value="power-10">
           <span class="front">^10</span>
         </button>
-        <button class="pushable">
+        <button class="pushable" value="delete">
           <span class="front">DEL</span>
         </button>
+      </div>
+      <div id="author">
+        <footer>Made by Sam Ghazzawi ❤️🤘🏼</footer>
       </div>
     </div>
     <script src="script.js"></script>

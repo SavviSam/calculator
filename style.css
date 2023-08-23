@@ -18,7 +18,6 @@ html {
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 80px));
-
   gap: 16px;
 }
 
@@ -87,9 +86,7 @@ html {
   content: attr(placeholder);
 }
 
-p[type="text"],
-p[type="text"]::placeholder,
-p[type="text"]::selection {
+p {
   color: rgb(0, 0, 0);
   user-select: none;
   -moz-user-select: none;

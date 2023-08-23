@@ -2,10 +2,10 @@ let output = document.getElementById("output-value");
 let result = document.getElementById("output");
 let button = document.querySelectorAll("button");
 
-
 button.forEach((button) => {
-  button.addEventListener("click", function Input(num) {
-    
+  const Input = () => {
     output.innerText += button.value;
-  });
+  };
+
+  button.addEventListener("click", Input);
 });

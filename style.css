@@ -1,23 +1,22 @@
-body,
-html {
+body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  height: 100%;
   display: grid;
   justify-content: center;
+  height: 100vh;
   align-content: center;
 }
 
-.container {
+.calculator-container {
   padding: 30px;
   border-radius: 45px;
   background-color: #0c1e31;
 }
-.wrapper {
+.calculator-grid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 80px));
+  grid-template-columns: repeat(4, minmax(80px, auto));
   gap: 16px;
 }
 
@@ -79,7 +78,7 @@ html {
 #output-value {
   margin: 0 auto;
   padding: 0 auto;
-  word-wrap: reverse;
+  word-wrap: break-word;
 }
 
 #output-value:empty:before {
@@ -96,14 +95,14 @@ p {
 #author {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 footer {
   font-family: "Futura", sans-serif;
   font-size: 1rem;
   position: absolute;
-  /* width: 100%; */
   text-align: center;
   bottom: 0;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }

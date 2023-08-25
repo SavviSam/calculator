@@ -34,7 +34,9 @@ body {
   border-radius: 40px;
   border: none;
   cursor: pointer;
-  outline-offset: 5px;
+  outline-style: none;
+
+  
 }
 
 .front {
@@ -45,6 +47,9 @@ body {
   background: #1d4986;
   color: #e4eff1;
   transform: translateY(-6px);
+
+
+  
 }
 
 .equal-face {
@@ -60,8 +65,16 @@ body {
   grid-column: span 2;
 }
 
-.pushable:active .front {
+.pushable:active .front:active {
   transform: translateY(-4px);
+  background: #1d498694
+
+}
+
+
+.transform {
+  transform: translateY(-4px);
+  background: #1d498694
 }
 
 #result {
@@ -88,7 +101,7 @@ body {
 }
 
 #output-value {
-  margin: 0 5px;
+  margin: 0 15px;
   padding: 0 auto;
   display: grid;
 }

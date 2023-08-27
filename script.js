@@ -6,13 +6,15 @@ const clearButton = document.querySelector("[data-clear]");
 const toggleButton = document.querySelector("[data-toggle]");
 const deleteButton = document.querySelector("[data-delete]");
 
+//Number button functions
 numberButton.forEach((button) => {
-  //calculator updates display for numbers based on button clicks and keyboard events
+  //number button click event
   const numberClick = () => output.append(button.textContent);
 
-  const numberKeyDown = (e) => {
-    switch (true) {
-      case e.key === button.textContent:
+  //number button keyboard event
+  const numberKey = (e) => {
+    switch (e.key) {
+      case button.textContent:
         button.classList.add("transform");
         output.append(button.textContent);
         break;
@@ -20,16 +22,18 @@ numberButton.forEach((button) => {
   };
 
   button.addEventListener("click", numberClick);
-  window.addEventListener("keydown", numberKeyDown);
+  window.addEventListener("keydown", numberKey);
 
   //remove animation from number buttons
   window.addEventListener("keyup", () => button.classList.remove("transform"));
 });
 
-//reset the calculator display to zero on user button click and keyboard event
+//Clear functions
+//clear button event
 const clearClick = () => (output.textContent = "");
 
-const clearKeyDown = (e) => {
+//clear display keyboard event
+const clearKey = (e) => {
   switch (true) {
     case e.key === "Escape" || e.key === "Clear":
       clearButton.classList.add("transform");
@@ -39,9 +43,10 @@ const clearKeyDown = (e) => {
 };
 
 clearButton.addEventListener("click", clearClick);
-window.addEventListener("keydown", clearKeyDown);
-
+window.addEventListener("keydown", clearKey);
 //remove animation on clear button
 window.addEventListener("keyup", () =>
   clearButton.classList.remove("transform")
 );
+
+//Operation functions

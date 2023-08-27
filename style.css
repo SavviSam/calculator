@@ -24,9 +24,10 @@ body {
 .calculator-grid {
   display: grid;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   gap: 16px;
-  grid-template-columns: repeat(4, 90px);
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto);
 }
 
 .pushable {
@@ -35,8 +36,6 @@ body {
   border: none;
   cursor: pointer;
   outline-style: none;
-
-  
 }
 
 .front {
@@ -47,9 +46,6 @@ body {
   background: #1d4986;
   color: #e4eff1;
   transform: translateY(-6px);
-
-
-  
 }
 
 .equal-face {
@@ -67,14 +63,12 @@ body {
 
 .pushable:active .front:active {
   transform: translateY(-4px);
-  background: #1d498694
-
+  background: #1d498694;
 }
-
 
 .transform {
   transform: translateY(-4px);
-  background: #1d498694
+  background: #1d498694;
 }
 
 #result {
@@ -97,16 +91,16 @@ body {
   justify-content: space-around;
   word-wrap: break-word;
   word-break: break-all;
-  font-size: 5em;
+  font-size: 3em;
 }
 
-#output-value {
+#value {
   margin: 0 15px;
   padding: 0 auto;
   display: grid;
 }
 
-#output-value:empty:before {
+#value:empty:before {
   content: attr(placeholder);
 }
 

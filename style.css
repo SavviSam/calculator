@@ -77,8 +77,6 @@ body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 30px;
-  padding-top: 170px;
-  margin-bottom: 15px;
   cursor: default;
   display: grid;
   grid-column: auto / span 4;
@@ -89,27 +87,35 @@ body {
   align-items: end;
   flex-direction: column;
   justify-content: space-around;
+
   word-wrap: break-word;
   word-break: break-all;
-  font-size: 3em;
+  padding: 10px;
 }
 
-#value {
-  margin: 0 15px;
-  padding: 0 auto;
-  display: grid;
+#output .previousOperand {
+  font-family: "Futura", sans-serif;
+
+  color: rgba(0, 0, 0, 0.772);
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  font-size: 2.25rem;
+  margin-bottom: 0;
 }
 
-#value:empty:before {
-  content: attr(placeholder);
-}
-
-p {
-  font-family: "Segment7Standard", sans-serif;
+#output .currentOperand {
+  font-family: "Futura", sans-serif;
   color: rgb(0, 0, 0);
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
+  font-size: 3.5rem;
+  margin-bottom: 0;
+}
+
+.currentOperand:empty::before {
+  content: attr(placeholder);
 }
 
 #author {
